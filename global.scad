@@ -11,11 +11,17 @@ leg_z = 390;
 face_y_inset = 15;
 
 // how far the joint extends planarly from the face
-joint_x = 15;
+joint_x = 12;
 // the lateral width of the joint
-joint_y = 15;
+joint_y = 20;
 // how far down the hook extends
 joint_hook_y = 15;
+
+joint_total_height = joint_y + joint_hook_y;
+
+num_joints = 3;
+q = leg_z/4;
+joint_height = [q, 2*q, 3*q];
 
 // rendering quality (face number)
 $fn = 50;
