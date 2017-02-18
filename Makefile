@@ -7,7 +7,8 @@ all: projection.svg
 		-e "s/lightgray/none/" \
 		-e "s/black/red/" \
 		-e "s/\"0.5\"/\"0.1px\"/" \
-		-e "s/<path /<path transform=\"scale\(3.54\)\" /" \
+		-e "s/\([0-9]\+\)\([, ]\)/\1mm\2/g" \
+		-e "s/\(\[0-9]\+\.[0-9]\+\)/\1mm/g" \
 		> $@
 #	inkscape temp2.svg --without-gui --export-area-drawing --export-plain-svg=$@
 	rm temp*.svg
