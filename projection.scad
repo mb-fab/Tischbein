@@ -56,28 +56,26 @@ module project_face_y()
 
 //base_material();
 
-color("red")
-    project_face_x();
+module set()
+{
+    color("red")
+        project_face_x();
 
-color("yellow")
-translate([
-    leg_x + projection_spacing,
-    0
-    ])
-    project_face_x();
+    color("yellow")
+    translate([
+        leg_x + projection_spacing,
+        0
+        ])
+        project_face_x();
 
-color("lightgreen")
-translate([
-    2*leg_x + 2*projection_spacing + joint_x,
-    0,
-    0
-    ])
-    project_face_y();
+    color("blue")
+    translate([
+        2*leg_x + projection_spacing + joint_x - 2,
+        0,
+        0
+        ])
+        project_face_y();
+}
 
-color("blue")
-translate([
-    3*leg_x + 3*projection_spacing + 3*joint_x,
-    0,
-    0
-    ])
-    project_face_y();
+set();
+translate([0,leg_z+2,0]) set();

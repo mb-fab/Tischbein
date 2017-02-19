@@ -23,17 +23,12 @@ module face_x()
                 ]);
 
         // cut out holes for the joints
-        for (x = [
-                    // left and right
-                    -leg_x/2 + face_y_inset,
-                    +leg_x/2 - face_y_inset
-                    ])
         {
             // at all the configured joint heights
             for (z = joint_height)
             {
                 translate([
-                    x - material_width/2,
+                    -material_width/2,
                     -material_width,
                     z
                     ])

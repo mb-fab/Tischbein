@@ -1,12 +1,12 @@
 
 // all measures in mm
 
-material_x = 510;
-material_y = 370;
-material_width = 3;
+material_x = 800;
+material_y = 205;
+material_width = 5.8;
 
-leg_x = 100;
-leg_y = 100;
+leg_x = 60;
+leg_y = 60;
 leg_z = 390;
 
 // about hoch much the faces in Y direction are inset
@@ -17,7 +17,7 @@ joint_x = 12;
 // the lateral width of the joint
 joint_y = 20;
 // how far down the hook extends
-joint_hook_y = 15;
+joint_hook_y = 25;
 
 joint_total_height = joint_y + joint_hook_y;
 

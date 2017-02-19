@@ -18,16 +18,4 @@ translate([
     ])
     face_x();
 
-translate([
-    -leg_x/2 + face_y_inset,
-    0,
-    0
-    ])
-    face_y();
-
-translate([
-    +leg_x/2 - face_y_inset,
-    0,
-    0
-    ])
-    face_y();
+face_y();
