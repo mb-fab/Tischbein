@@ -28,7 +28,7 @@ module face_x()
             translate([
                 0,
                 0,
-                leg_z - nose_z/2 - nothing
+                leg_z - nose_z/2
                 ])
             cube([
                 nose_width,

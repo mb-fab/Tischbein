@@ -8,6 +8,11 @@ material_x = 510;
 material_y = 370;
 material_width = 8;
 
+// Measures of the top plate
+top_x = 550;
+top_y = 550;
+
+// Leg measurements
 leg_x = 450;
 leg_z = 950;
 

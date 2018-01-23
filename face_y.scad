@@ -30,7 +30,7 @@ module face_y()
         translate([
             0,
             (leg_y - material_width)/2,
-            leg_z - nose_z/2 - nothing
+            leg_z - nose_z/2
             ])
         cube([
             material_width,

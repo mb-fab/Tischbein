@@ -3,6 +3,7 @@ include <global.scad>;
 use <joint.scad>;
 use <face_x.scad>;
 use <face_y.scad>;
+use <top.scad>;
 
 translate([
     0,
@@ -31,3 +32,10 @@ translate([
     0
     ])
     face_y();
+
+translate([
+    0,
+    0,
+    leg_z - nose_z
+    ])
+    top();
