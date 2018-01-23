@@ -11,7 +11,7 @@ all: projection.svg
 		-e "s/\(\[0-9]\+\.[0-9]\+\)/\1mm/g" \
 		> $@
 #	inkscape temp2.svg --without-gui --export-area-drawing --export-plain-svg=$@
-	rm temp*.svg
+#	rm temp*.svg
 
 clean:
 	rm -fr temp*.svg projection.svg

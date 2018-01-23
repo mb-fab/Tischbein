@@ -1,7 +1,7 @@
 
 // all measures in mm
 
-$fn = 100;
+$fn = 200;
 nothing = 0.01;
 
 material_x = 510;
@@ -14,7 +14,7 @@ top_y = 550;
 
 // Leg measurements
 leg_x = 450;
-leg_z = 950;
+leg_z = 940;
 
 // about hoch much the faces in Y direction are inset
 face_y_inset = 30;
