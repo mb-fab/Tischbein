@@ -9,6 +9,7 @@ module face_x()
     color("red")
     difference()
     {
+        // Base plate with noses
         union()
         {
             // center
@@ -36,6 +37,18 @@ module face_x()
                 nose_z + 2*nothing
                 ], center=true);
         }
+
+        // Cut out hole for bottom nose
+        translate([
+            0,
+            0,
+            bottom_elevation + material_width/2
+            ])
+        cube([
+                bottom_nose_width,
+                bottom_nose_height,
+                material_width
+                ], center=true);
 
         // cut out holes for the joints
         for (x = [

@@ -36,8 +36,16 @@ num_joints = 4;
 q = leg_z/(num_joints+1);
 joint_height = [q, 2*q, 3*q, 4*q];
 
+// Top nose configuration
 nose_width = 100;
 nose_z = material_width;
+
+// Bottom plate configuration
+bottom_x = leg_x - 2*face_y_inset - material_width;
+bottom_y = leg_y - material_width;
+bottom_nose_width = 150;
+bottom_nose_height = joint_x + material_width - 5;
+bottom_elevation = 40;
 
 // how far apart from on another to project the parts
 projection_spacing = 1;

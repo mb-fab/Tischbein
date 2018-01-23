@@ -4,6 +4,7 @@ use <joint.scad>;
 use <face_x.scad>;
 use <face_y.scad>;
 use <top.scad>;
+use <bottom.scad>;
 
 translate([
     0,
@@ -39,3 +40,6 @@ translate([
     leg_z - nose_z
     ])
     top();
+
+translate([0, 0, bottom_elevation])
+bottom();
