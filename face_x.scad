@@ -9,18 +9,33 @@ module face_x()
     color("red")
     difference()
     {
-        // center
-        translate([
-            -leg_x/2,
-            -material_width/2,
-            0
-            ])
+        union()
+        {
+            // center
+            translate([
+                -leg_x/2,
+                -material_width/2,
+                0
+                ])
             // basic rectangular face
             cube([
                 leg_x,
                 material_width,
-                leg_z
+                leg_z - nose_z
                 ]);
+
+            // Put a nose on the top
+            translate([
+                0,
+                0,
+                leg_z - nose_z/2 - nothing
+                ])
+            cube([
+                nose_width,
+                material_width,
+                nose_z + 2*nothing
+                ], center=true);
+        }
 
         // cut out holes for the joints
         for (x = [

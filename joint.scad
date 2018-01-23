@@ -11,23 +11,46 @@ module joint()
         ])
     {
         // main support structure
-        cube([
-            joint_x,
-            material_width,
-            joint_y
-            ]);
+        intersection()
+        {
+            cube([
+                joint_x,
+                material_width,
+                joint_y
+                ]);
+
+            scale([
+                joint_x,
+                material_width,
+                joint_y
+                ])
+            rotate([90, 0, 0])
+            cylinder(r=1, h=2, center=true);
+        }
 
         // add hook
         translate([
             material_width,
             0,
-            -joint_hook_y
+            0
             ])
+        mirror([0, 0, 1])
+        intersection()
+        {
             cube([
                 joint_x - material_width,
                 material_width,
                 joint_hook_y
                 ]);
+
+            scale([
+                joint_x - material_width,
+                material_width,
+                joint_hook_y
+                ])
+            rotate([90, 0, 0])
+            cylinder(r=1, h=2, center=true);
+        }
     }
 }
 

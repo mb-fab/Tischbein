@@ -20,11 +20,23 @@ module face_y()
             -material_width/2,
             0,
             0])
-            cube([
-                material_width,
-                leg_y - material_width,
-                leg_z
-                ]);
+        cube([
+            material_width,
+            leg_y - material_width,
+            leg_z - nose_z
+            ]);
+
+        // Put a nose on the top
+        translate([
+            0,
+            (leg_y - material_width)/2,
+            leg_z - nose_z/2 - nothing
+            ])
+        cube([
+            material_width,
+            nose_width,
+            nose_z + 2*nothing
+            ], center=true);
 
         /*
          * add joints
