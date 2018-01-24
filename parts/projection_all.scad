@@ -1,9 +1,9 @@
 
-include <global.scad>;
-use <face_x.scad>;
-use <face_y.scad>;
-use <top.scad>;
-use <bottom.scad>;
+include <../global.scad>;
+use <../face_x.scad>;
+use <../face_y.scad>;
+use <../top.scad>;
+use <../bottom.scad>;
 
 module base_material()
 {
@@ -62,7 +62,7 @@ module project_top()
 }
 
 //base_material();
-
+/*
 color("red")
     project_face_x();
 
@@ -88,7 +88,8 @@ translate([
     0
     ])
     project_face_y();
+*/
 
-//translate([4*leg_x + 4*projection_spacing + 4*joint_x, 0, 0])
-//projection()
-//bottom();
+translate([4*leg_x + 4*projection_spacing + 4*joint_x, 0, 0])
+projection()
+bottom();

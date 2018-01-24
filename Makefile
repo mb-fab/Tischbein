@@ -1,5 +1,5 @@
 
-all: projection.svg
+all: parts/projection_all.svg
 
 %.svg: %.scad
 	openscad $< -o temp.svg
@@ -14,4 +14,4 @@ all: projection.svg
 #	rm temp*.svg
 
 clean:
-	rm -fr temp*.svg projection.svg
+	rm -fr temp*.svg parts/projection*.svg
