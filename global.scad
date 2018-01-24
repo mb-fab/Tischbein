@@ -44,7 +44,7 @@ nose_z = material_width;
 bottom_x = leg_x - 2*face_y_inset - material_width;
 bottom_y = leg_y - material_width;
 bottom_nose_width = 150;
-bottom_nose_height = joint_x + material_width - 5;
+bottom_nose_height = joint_x - material_width;
 bottom_elevation = 40;
 
 // how far apart from on another to project the parts
